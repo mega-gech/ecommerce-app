@@ -51,7 +51,7 @@ export default function Home() {
             onScroll={(e) => {
               const slide = Math.ceil(
                 e.nativeEvent.contentOffset.x /
-                  e.nativeEvent.layoutMeasurement.width,
+                e.nativeEvent.layoutMeasurement.width,
               );
               if (slide !== activeBannerIndex) {
                 setActiveBannerIndex(slide);
@@ -97,9 +97,8 @@ export default function Home() {
               <View
                 key={index}
                 className={`h-2 rounded-full 
-            ${
-              index === activeBannerIndex ? "w-6 bg-primary" : "w-2 bg-gray-300"
-            }`}
+            ${index === activeBannerIndex ? "w-6 bg-primary" : "w-2 bg-gray-300"
+                  }`}
               />
             ))}
           </View>
